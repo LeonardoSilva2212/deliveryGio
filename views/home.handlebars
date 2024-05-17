@@ -1,10 +1,31 @@
-<div class="container">
+<main class="container">
+
     <div class="logo">
-        <img src="public/img/logo.svg" alt="Logo">
+        <img src="/img/logoImg.svg" alt="Logo">
     </div>
 
     <div class="search-bar">
-        <input type="text" placeholder="Pesquisar...">
-        <img src="/images/search.png" alt="Search Icon">
+        <img src="/img/lupaImg.svg" alt="Search Icon">
+         <input type="text" placeholder="Pesquisar...">
     </div>
-</div>
+
+        <hr>
+
+    <div class="location-container">
+        <span id="location-display">Inserir localização</span>
+        <img src="/img/setaBaixo.svg" alt="Down Arrow" id="toggle-location">
+        <input type="text" id="location-input" placeholder="Digite sua localização...">
+    </div>
+
+        <hr id="2">
+
+
+    <div class="options">
+       <p>Já Possui uma conta?</p>
+       <button>Login</button>
+       <img src="img/bagImg.svg" alt="">
+    </div>
+
+</main>
+
+<script src="/js/location.js"></script>

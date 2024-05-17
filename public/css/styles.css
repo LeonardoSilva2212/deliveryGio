@@ -5,3 +5,124 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.container{
+    display: flex;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.logo{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 50px;
+    width: auto;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.search-bar img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.search-bar input{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 15px;
+    flex-grow: 1;
+}
+
+.search-bar input::placeholder {
+    color: #ccc; /* Cor do texto placeholder */
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.location-container #location-display {
+    color: #333; /* Cor do texto */
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+.location-container img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#location-input {
+    display: none;
+    width: 150px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+hr{
+    color: orange;
+    width: 2px;
+    background-color: rgb(221, 150, 9);
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 14px;
+    margin-right: 5px;
+    border: rgb(221, 150, 9);
+}
+
+#hr2{
+    color: orange;
+    width: 2px;
+    background-color: rgb(221, 150, 9);
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 14px;
+    margin-right: 5px;
+    border: rgb(221, 150, 9);
+}
+
+.options{
+    display: flex;
+    margin-left: 50px;
+}
+
+.options p{
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.options button{
+    margin-top: 20px;
+    color: black;
+    background-color: orange;
+    border: transparent;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 10px;
+    height: 35px; /* Definindo a altura do botão */
+    width: 60px;
+}
+
+.options img{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
