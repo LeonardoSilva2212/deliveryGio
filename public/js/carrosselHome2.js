@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
     const itemsToShow = 3;
-    const itemsToScrow = 1;
+    const itemsToScrow = 1.5;
+    const totalItems = items2.length;
+    const maxIndex = totalItems - itemsToShow;
+
 
     function updateCarousel() {
-        const translateX = -currentIndex * (100 / itemsToShow);
+        const translateX = -currentIndex * (115 / itemsToShow);
         carousel2.style.transform = `translateX(${translateX}%)`;
     }
 
@@ -21,9 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextButton.addEventListener('click', () => {
-        if (currentIndex < items2.length - itemsToShow) {
+        if (currentIndex < maxIndex) {
             currentIndex+= itemsToScrow;
             updateCarousel();
         }
+    });
+
+    carousel2.addEventListener('transitionend', () => {
+        if (currentIndex < 0){
+            currentIndex = 0;
+        } else if(currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+        updateCarousel();
     });
 });
