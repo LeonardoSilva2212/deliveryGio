@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button2.next');
 
     let currentIndex = 0;
-    const itemsToShow = 5;
+    const itemsToShow = 3;
+    const itemsToScrow = 1;
 
     function updateCarousel() {
         const translateX = -currentIndex * (100 / itemsToShow);
@@ -14,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevButton.addEventListener('click', () => {
         if(currentIndex > 0){
-            currentIndex--;
+            currentIndex-= itemsToScrow;
             updateCarousel();
         }
     });
 
     nextButton.addEventListener('click', () => {
         if (currentIndex < items2.length - itemsToShow) {
-            currentIndex++;
+            currentIndex+= itemsToScrow;
             updateCarousel();
         }
     });

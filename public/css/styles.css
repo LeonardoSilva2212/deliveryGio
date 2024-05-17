@@ -230,9 +230,9 @@ hr {
 }
 
 .carousel-item2 {
-    min-width: 20%;
+    min-width: 30%;
     box-sizing: border-box;
-    padding: 0px;
+    padding: 0 10px ;
 
 }
 
@@ -241,7 +241,6 @@ hr {
     height: auto;
     max-width: 600px;
     margin: auto;
-    margin-left: 45px;
 }
 
 .carousel-button2 {
