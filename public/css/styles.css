@@ -124,5 +124,32 @@ hr{
     width: 40px;
     height: 40px;
     margin-top: 15px;
-    margin-left: 50px;
+    margin-left: 10px;
+}
+
+#cupomBanner{
+    background-color: orange;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+#cupomImg{
+    display: flex;
+}
+
+#cupomImg img{
+    width: 100px;
+    height: 100px;
+    margin-left: 120px;
+    align-items: center;
+}
+
+#cupomText{
+    display: flex;
+    color: white;
+    font-size: 17px;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 15px
 }
