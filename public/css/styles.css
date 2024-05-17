@@ -6,7 +6,7 @@
 }
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -167,6 +167,7 @@ hr {
     align-items: center;
     position: relative;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .carousel {
@@ -209,6 +210,58 @@ hr {
 }
 
 .carousel-button.next {
+    right: 0;
+    margin-top: -11px;
+}
+
+.carrossel-container2{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.carousel2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 30px;
+}
+
+.carousel-item2 {
+    min-width: 20%;
+    box-sizing: border-box;
+    padding: 0px;
+
+}
+
+.carousel2 img {    
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: auto;
+    margin-left: 45px;
+}
+
+.carousel-button2 {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: orange;
+}
+
+.carousel-button2.prev {
+    left: 0;
+    margin-top: -11px;
+}
+
+.carousel-button2.next {
     right: 0;
     margin-top: -11px;
 }
