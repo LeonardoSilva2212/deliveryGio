@@ -11,31 +11,31 @@ body{
 
 .container {
     display: flex;
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 1.953125vw;
+    margin-top: 0.78125vw;
 }
 
 .logo {
-    padding: 10px;
-    margin-left: 10px;
+    padding: 0.78125vw;
+    margin-left: 0.78125vw;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 2px 5px;
-    border-radius: 50px;
+    padding: 0.15625vw 0.390625vw;
+    border-radius: 3.90625vw;
     width: auto;
-    height: 40px;
-    margin-top: 20px;
-    margin-left: 20px;
+    height: 3.125vw;
+    margin-top: 1.5625vw;
+    margin-left: 1.5625vw;
 }
 
 .search-bar img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: 1.5625vw;
+    height: 1.5625vw;
+    margin-right: 0.390625vw;
 }
 
 .search-bar input {
@@ -43,10 +43,10 @@ body{
     outline: none;
     background: none;
     color: black;
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 15px;
-    flex-grow: 1;
+    font-size: 1.25vw;
+    padding: 0.390625vw;
+    border-radius: 1.171875vw;
+    flex-grow: 1;   
 }
 
 .search-bar input::placeholder {
@@ -63,67 +63,67 @@ body{
 .location-container #location-display {
     color: #333;
     /* Cor do texto */
-    margin-right: 5px;
-    margin-left: 20px;
+    margin-right: 0.390625vw;
+    margin-left: 1.5625vw;
 }
 
 .location-container img {
-    width: 20px;
-    height: 20px;
+    width: 1.5625vw;
+    height: 1.5625vw;
     cursor: pointer;
 }
 
 #location-input {
     display: none;
-    width: 150px;
-    padding: 5px;
-    margin-left: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 11.71875vw;
+    padding: 0.390625vw;
+    margin-left: 0.78125vw;
+    border: 0.078125vw solid #ccc;
+    border-radius: 0.390625vw;
     outline: none;
 }
 
 hr {
     color: orange;
-    width: 2px;
+    width: 0.15625vw;
     background-color: rgb(221, 150, 9);
-    height: 50px;
-    margin-left: 30px;
-    margin-top: 14px;
-    margin-right: 5px;
+    height: 3.90625vw;
+    margin-left: 2.34375vw;
+    margin-top: 1.09375vw;
+    margin-right: 0.390625vw;
     border: rgb(221, 150, 9);
 }
 
 #hr2 {
     color: orange;
-    width: 2px;
+    width: 0.15625vw;
     background-color: rgb(221, 150, 9);
-    height: 50px;
-    margin-left: 30px;
-    margin-top: 14px;
-    margin-right: 5px;
+    height: 3.90625vw;
+    margin-left: 2.34375vw;
+    margin-top: 1.09375vw;
+    margin-right: 0.390625vw;
     border: rgb(221, 150, 9);
 }
 
 .options {
     display: flex;
-    margin-left: 50px;
+    margin-left: 3.90625vw;
 }
 
 .options p {
-    font-size: 15px;
-    margin-top: 30px;
+    font-size: 1.171875vw;
+    margin-top: 2.34375vw;
 }
 
 .options button {
-    margin-top: 20px;
+    margin-top: 1.5625vw;
     color: black;
     background-color: orange;
     border: transparent;
-    border-radius: 20px;
-    font-size: 13px;
-    margin-left: 10px;
-    height: 35px;
+    border-radius: 1.5625vw;
+    font-size: 1.015625vw;
+    margin-left: 0.78125vw;
+    height: 2.734375vw;
     /* Definindo a altura do botão */
     width: 60px;
 }
