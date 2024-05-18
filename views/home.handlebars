@@ -28,18 +28,18 @@
 
 </main>
 
-<main id="cupomBanner">
+<section id="cupomBanner">
 
-    <section id="cupomImg">
+    <div id="cupomImg">
 
         <img src="/img/cupomImg.svg" alt="">
         <div id="cupomText">
             <h1>Bem vindo ao FoodDelivery! Cupons aos fins de semana e feriados!</h1>
         </div>
 
-    </section>
+    </div>
 
-</main>
+</section>
 
 <div class="carrossel-container">
     <button class="carousel-button prev">◀</button>
@@ -58,23 +58,118 @@
 </div>
 
 <div class="carrossel-container2">
-
     <button class="carousel-button2 prev">◀</button>
-
-    <div class="carousel2">
-        <div class="carousel-item2"><img src="/img/card1.svg" alt="Imagem 1"></div>
-        <div class="carousel-item2"><img src="/img/card2.svg" alt="Imagem 2"></div>
-        <div class="carousel-item2"><img src="/img/card3.svg" alt="Imagem 3"></div>
-        <div class="carousel-item2"><img src="/img/card4.svg" alt="Imagem 4"></div>
-        <div class="carousel-item2"><img src="/img/card4.svg" alt="Imagem 4"></div>
-        <div class="carousel-item2"><img src="/img/card5.svg" alt="Imagem 5"></div>
-        <div class="carousel-item2"><img src="/img/card6.svg" alt="Imagem 6"></div>
-    </div>
+        <div class="carousel2">
+            <div class="carousel-item2"><img src="/img/card1.svg" alt="Imagem 1"></div>
+            <div class="carousel-item2"><img src="/img/card2.svg" alt="Imagem 2"></div>
+            <div class="carousel-item2"><img src="/img/card3.svg" alt="Imagem 3"></div>
+            <div class="carousel-item2"><img src="/img/card4.svg" alt="Imagem 4"></div>
+            <div class="carousel-item2"><img src="/img/card4.svg" alt="Imagem 4"></div>
+            <div class="carousel-item2"><img src="/img/card5.svg" alt="Imagem 5"></div>
+            <div class="carousel-item2"><img src="/img/card6.svg" alt="Imagem 6"></div>
+        </div>
     <button class="carousel-button2 next">▶</button>
 </div>
 
+<hr id="hr-inferior">
 
+<div class="carrossel-container3">
+    <button class="carousel-button3 prev">◀</button>
+        <div class="carousel3">
+            <div class="carousel-item3"><img src="/img/bigCard.svg" alt="imagem 1"></div>
+            <div class="carousel-item3"><img src="/img/bigCard2.svg" alt="imagem 2"></div>
+            <div class="carousel-item3"><img src="/img/bigCard3.svg" alt="imagem 3"></div>
+        </div>
+    <button class="carousel-button3 next">▶</button>
+</div>
+
+<section class="menus">
+
+    <div class="dropdown-container">
+        <div class="dropdown">
+
+            <div class="dropdownInit">
+                <span id="order-display">Ordenar</span>
+                <img src="/img/setaBaixo.svg" alt="Down Arrow" class="toggle-dropdown" data-dropdown="order-dropdown">
+            </div>
+
+            <div class="dropdown-menu" id="order-dropdown">
+                <div class="dropdown-item">
+                    <img src="/img/padraoImg.svg" alt="Ícone Padrão">
+                    <span>Ordenação padrão</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="/img/precoImg.svg" alt="Ícone Preço">
+                    <span>Preço</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="/img/avaliacaoImg.svg" alt="Ícone Avaliação">
+                    <span>Avaliação</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="/img/entregaImg.svg" alt="Ícone Tempo de Entrega">
+                    <span>Tempo de entrega</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="/img/tempoImg.svg" alt="Ícone Taxa de Entrega">
+                    <span>Taxa de entrega</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="/img/distanciaImg.svg" alt="Ícone Menor Distância">
+                    <span>Menor distância</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+
+            <div class="dropdownInit">
+                <span id="vale-refeicao-display">Vale Refeição</span>
+                <img src="/img/setaBaixo.svg" alt="Down Arrow" class="toggle-dropdown" data-dropdown="vale-refeicao-dropdown">
+            </div>
+
+            <div class="dropdown-menu" id="vale-refeicao-dropdown">
+                <label class="dropdown-item">
+                    <span>Vr Refeição</span>
+                    <input type="checkbox">
+                </label>
+                <label class="dropdown-item">
+                    <span>Pluxe Refeição</span>
+                    <input type="checkbox">
+                </label>
+                <label class="dropdown-item">
+                    <span>Alelo Refeição</span>
+                    <input type="checkbox">
+                </label>
+                <label class="dropdown-item">
+                    <span>Ticket Refeição</span>
+                    <input type="checkbox">
+                </label>
+                <label class="dropdown-item">
+                    <span>Ben Refeição</span>
+                    <input type="checkbox">
+                </label>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            
+            <div class="dropdownInit">
+                <span id="distance-display">Distância</span>
+                <img src="/img/setaBaixo.svg" alt="Down Arrow" class="toggle-dropdown" data-dropdown="distance-dropdown">
+            </div>
+
+            <div class="dropdown-menu" id="distance-dropdown">
+                <input type="range" min="0" max="1000" value="0" id="distance-range">
+                <span id="distance-value">0 km</span>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <script src="/js/location.js"></script>
 <script src="/js/carrosselHome.js"></script>
 <script src="/js/carrosselHome2.js"></script>
+<script src="/js/carrosselCard.js"></script>
+<script src="/js/menus.js"></script>

@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel2 = document.querySelector('.carousel2');
-    const items2 = document.querySelectorAll('.carousel-item2');
-    const prevButton = document.querySelector('.carousel-button2.prev');
-    const nextButton = document.querySelector('.carousel-button2.next');
+    const carousel3 = document.querySelector('.carousel3');
+    const items3 = document.querySelectorAll('.carousel-item3');
+    const prevButton = document.querySelector('.carousel-button3.prev');
+    const nextButton = document.querySelector('.carousel-button3.next');
 
     let currentIndex = 0;
-    const itemsToShow = 4;
+    const itemsToShow = 1;
     const itemsToScrow = 1;
-    const totalItems = items2.length;
+    const totalItems = items3.length;
     const maxIndex = totalItems - itemsToShow;
 
-
     function updateCarousel() {
-        const translateX = -currentIndex * (211 / itemsToShow);
-        carousel2.style.transform = `translateX(${translateX}%)`;
+        const translateX = -currentIndex * 100;
+        carousel3.style.transform = `translateX(${translateX}%)`;
     }
 
     prevButton.addEventListener('click', () => {
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    carousel2.addEventListener('transitionend', () => {
+    carousel3.addEventListener('transitionend', () => {
         if (currentIndex < 0){
             currentIndex = 0;
         } else if(currentIndex > maxIndex) {
@@ -38,4 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateCarousel();
     });
-});
+})

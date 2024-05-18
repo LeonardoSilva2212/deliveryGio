@@ -175,7 +175,7 @@ hr {
     transition: transform 0.5s ease-in-out;
     width: 100%;
     max-width: 1400px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .carousel-item {
@@ -219,11 +219,13 @@ hr {
     align-items: center;
     position: relative;
     width: 100%;
+    margin-top: 40px;
+
 }
 
 .carousel2 {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
     width: 100%;
     max-width: 1100px;
     margin-top: 50px;
@@ -233,22 +235,24 @@ hr {
 .carousel-item2 {
     min-width: 31%;
     box-sizing: border-box;
-    margin-left: 78px;
+    margin-left: 95px;
 
 }
 
-.carousel-item2:first-child {
-    min-width: 30%;
+.carousel-item2:first-child{
+    min-width: 31%;
     box-sizing: border-box;
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .carousel2 img {    
-    width: 350px;
+    width: 390px;
     height: auto;
     max-width: 600px;
     margin: auto;
 }
+
+
 
 .carousel-button2 {
     background: none;
@@ -272,3 +276,180 @@ hr {
     right: 0;
     margin-top: 10px;
 }
+
+.carrossel-container3{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.carousel3 {
+    display: flex;
+    transition: transform 0.9s ease-in-out;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.carousel-item3 {
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-right: 0px;
+}
+
+.carousel-item3:first-child {
+    margin-left: 45px;
+}
+
+
+.carousel3 img {    
+    width: 90%;
+    height: auto;
+    margin: 0;
+}
+
+.carousel-button3 {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0 20px;
+    color: orange;
+}
+
+.carousel-button3.prev {
+    left: 0;
+    margin-top: 10px;
+}
+
+.carousel-button3.next {
+    right: 0;
+    margin-top: 10px;
+}
+
+#hr-inferior{
+    width: 40%;
+    height: 2px;
+    margin-top: 50px;
+    margin-left: 410px;
+}
+
+.dropdownInit{
+    background-color: #D9D9D9;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+
+}
+
+.dropdown-container {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #645f5f;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown-content .dropdown-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content .dropdown-item img {
+    margin-right: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-button img {
+    margin-left: 0.5rem;
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.dropdown img.toggle-dropdown {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F7F7F7;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    column-count: 2; 
+    column-gap: 60px; 
+    max-height: 200px; 
+    padding: 15px; 
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.dropdown-item img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-menu label {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#distance-dropdown input[type="range"] {
+    width: 100%;
+}
+
+#distance-value {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-item input[type="checkbox"] {
+    margin-right: 20px; /* Distância entre a caixa de seleção e o texto */
+}
+
