@@ -1,0 +1,52 @@
+.restaurants-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.restaurant-card {
+    width: 30%; 
+    margin: 1%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    background-color: #CCCCCC;
+}
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; /* Para arredondar apenas a parte superior da imagem */
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details p {
+    margin-bottom: 5px;
+    font-size: 10px;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.lojas h2{
+    font-size: 30px;
+    color: orange;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.restaurant-card p{
+    margin: 5px 0;
+}
+
+.card-image {
+    width: 100%; /* A imagem ocupará toda a largura do card */
+    height: 200px; /* Defina a altura desejada para as imagens */
+    object-fit: cover; /* A imagem será redimensionada para preencher o espaço mantendo a proporção */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

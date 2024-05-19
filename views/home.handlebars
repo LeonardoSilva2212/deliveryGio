@@ -168,6 +168,28 @@
 
 </section>
 
+<div class="lojas">
+
+    <h2>Lojas</h2>
+
+<div class="restaurants-container">
+    {{#each restaurantes}}
+    <div class="restaurant-card">
+        <img class="card-image" src="{{this.imagem_url}}" alt="{{this.nome}}">
+        <h3>{{this.nome}}</h3>
+        <p>Avaliação: {{this.avaliacao}}</p>
+        <p>Tipo: {{this.tipo}}</p>
+        <p>Distância: {{this.distancia}} km</p>
+        <p>Tempo médio de entrega: {{this.tempo_entrega}} min</p>
+        <p>Valor médio: R$ {{this.valor_medio}}</p>
+    </div>
+    {{/each}}
+</div>
+
+<button id="ver-mais" onclick="location.href='/mais-restaurantes'">Ver Mais</button>
+
+</div>
+
 <script src="/js/location.js"></script>
 <script src="/js/carrosselHome.js"></script>
 <script src="/js/carrosselHome2.js"></script>
