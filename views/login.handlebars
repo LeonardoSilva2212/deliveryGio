@@ -1,0 +1,51 @@
+<main class="login-container">
+
+    <div class="welcome-section">
+        <h1>Seja bem-vindo</h1>
+        <a href="/login"><button class="btn-entrar">Entrar</button></a>
+    </div>
+
+    <div class="create-account-section">
+
+        <h1>Criar uma conta</h1>
+        <form action="/create-account" method="POST" class="create-account-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+
+                <div class="input-container">
+                    <input type="text" id="name" name="name" required>
+                    <img src="/img/nomeImg.svg" alt="Nome">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <div class="input-container">
+                    <input type="email" id="email" name="email" required>
+                    <img src="/img/emailImg.svg" alt="Email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <div class="input-container">
+                    <input type="tel" id="phone" name="phone" required>
+                    <img src="/img/telefoneImg.svg" alt="Telefone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required>
+                    <img src="/img/senhaImg.svg" alt="Senha">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-criar">Criar</button>
+        </form>
+    </div>
+</main>
+
+<script src="/js/login.js"></script>

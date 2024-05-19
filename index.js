@@ -8,6 +8,11 @@ const app = express();
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
+// Rota para a página de login
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
 // Os arquivos públicos ficarão na pasta public
 app.use(express.static("public"));
 
