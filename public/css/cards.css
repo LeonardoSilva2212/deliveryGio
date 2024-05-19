@@ -8,10 +8,10 @@
 .restaurant-card {
     width: 30%; 
     margin: 1%;
-    border: 1px solid #ccc;
+    border: 2px solid #4e4a4a;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(185, 177, 177, 0.1);
     line-height: 1.5;
     background-color: #CCCCCC;
 }
