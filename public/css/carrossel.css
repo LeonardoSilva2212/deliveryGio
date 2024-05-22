@@ -3,24 +3,24 @@
     align-items: center;
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-.carousel {
+.carousel-home {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
     max-width: 1400px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.carousel-item {
+.carousel-item-home {
     min-width: 20%;
     box-sizing: border-box;
     padding: 5px;
 }
 
-.carousel img {
+.carousel-home img {
     width: 100%;
     height: auto;
     max-width: 200px;
@@ -28,7 +28,7 @@
     margin-left: 25px;
 }
 
-.carousel-button {
+.carousel-button-home {
     background: none;
     border: none;
     font-size: 2rem;
@@ -40,12 +40,12 @@
     color: orange;
 }
 
-.carousel-button.prev {
+.carousel-button-home.prev {
     left: 0;
     margin-top: -11px;
 }
 
-.carousel-button.next {
+.carousel-button-home.next {
     right: 0;
     margin-top: -11px;
 }

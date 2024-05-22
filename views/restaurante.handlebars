@@ -1,0 +1,35 @@
+<main>
+
+    <div class="header">
+        <img src="/{{restaurante.imagem_url}}" alt="{{restaurante.nome}}">
+        <h1>{{restaurante.nome}}</h1>
+    </div>
+
+    <section>
+
+        <div class="info">
+            <p>Avaliação: {{restaurante.avaliacao}}★</p>
+            <p>Tipo: {{restaurante.tipo}}</p>
+            <p>Distância: {{restaurante.distancia}} km</p>
+            <p>Tempo de Entrega: {{restaurante.tempo_entrega}} minutos</p>
+            <p>Valor Médio: R$ {{restaurante.valor_medio}}</p>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-button prev">◀</button>
+            <div class="carousel">
+                {{#each lanches}}
+                    <div class="carousel-item">
+                        <img src="/{{this.imagem_url}}" alt="Lanche">
+                    </div>
+                {{/each}}
+            </div>
+
+            <button class="carousel-button next">▶</button>
+        </div>
+
+    </section>
+    
+</main>
+<script src="/js/bkCarrosseis.js"></script>
+

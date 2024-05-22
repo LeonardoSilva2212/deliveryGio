@@ -7,6 +7,7 @@ const app = express();
 // Configurando o handlebars como template engine
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
+app.set('views', './views'); 
 
 // Rota para a página de login
 app.get('/login', (req, res) => {
@@ -43,6 +44,34 @@ app.get('/', (req, res) => {
         res.render('home', { restaurantes: results });
     });
 });
+
+app.get('/restaurante/:id', (req, res) => {
+    const restauranteId = req.params.id;
+    const queryRestaurante = 'SELECT * FROM restaurantes WHERE id = ?';
+    const queryLanches = 'SELECT * FROM lanches WHERE restaurante_id = ?';
+
+    connection.query(queryRestaurante, [restauranteId], (err, restauranteResult) => {
+        if (err) {
+            console.error('Erro ao buscar dados do restaurante:', err);
+            res.status(500).send('Erro ao buscar dados do restaurante');
+            return;
+        }
+
+        connection.query(queryLanches, [restauranteId], (err, lanchesResult) => {
+            if (err) {
+                console.error('Erro ao buscar dados dos lanches:', err);
+                res.status(500).send('Erro ao buscar dados dos lanches');
+                return;
+            }
+
+            res.render('restaurante', {
+                restaurante: restauranteResult[0],
+                lanches: lanchesResult
+            });
+        });
+    });
+});
+
 
 const PORT = 3000;
 app.listen(PORT, () => {

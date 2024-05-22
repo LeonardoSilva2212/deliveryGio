@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel');
-    const items = document.querySelectorAll('.carousel-item');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
+    const carousel = document.querySelector('.carousel-home');
+    const items = document.querySelectorAll('.carousel-item-home');
+    const prevButton = document.querySelector('.carousel-button-home.prev');
+    const nextButton = document.querySelector('.carousel-button-home.next');
 
     let currentIndex = 0;
     const itemsToShow = 5;

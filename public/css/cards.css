@@ -7,17 +7,16 @@
 
 .restaurant-card {
     width: 30%; 
-    margin: 1%;
-    border: 2px solid #4e4a4a;
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(185, 177, 177, 0.1);
+    margin: 16px;
+    border-radius: 30px;
+    padding: 16px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.9);
     line-height: 1.5;
-    background-color: #CCCCCC;
+    background-color: #FFF;
+    display: grid;
 }
 
 .restaurant-card img {
-    width: 100%;
     border-radius: 5px 5px 0 0; /* Para arredondar apenas a parte superior da imagem */
 }
 
@@ -44,9 +43,26 @@
 }
 
 .card-image {
-    width: 100%; /* A imagem ocupará toda a largura do card */
-    height: 200px; /* Defina a altura desejada para as imagens */
+    width: 118px; /* A imagem ocupará toda a largura do card */
+    height: 118px; /* Defina a altura desejada para as imagens */
     object-fit: cover; /* A imagem será redimensionada para preencher o espaço mantendo a proporção */
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.ver-mais-btn{
+    background-color: orange;
+    padding: 10px;
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.restaurant-card a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
 }

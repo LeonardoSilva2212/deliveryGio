@@ -1,0 +1,65 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 20%;
+    margin: 0 5px;
+    transition: transform 0.5s;
+}
+
+.carousel-button.prev {
+    align-self: flex-start;
+}
+
+.carousel-button.next {
+    align-self: flex-end;
+}

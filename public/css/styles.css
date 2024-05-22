@@ -124,7 +124,7 @@ hr {
     font-size: 1.015625vw;
     margin-left: 0.78125vw;
     height: 2.734375vw;
-    /* Definindo a altura do botão */
+    cursor: pointer;
     width: 60px;
 }
 

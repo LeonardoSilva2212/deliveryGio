@@ -41,20 +41,20 @@
 
 </section>
 
-<div class="carrossel-container">
-    <button class="carousel-button prev">◀</button>
-        <div class="carousel">
-            <div class="carousel-item"><img src="/img/comidas1.svg" alt="Imagem 1"></div>
-            <div class="carousel-item"><img src="/img/comidas2.svg" alt="Imagem 2"></div>
-            <div class="carousel-item"><img src="/img/comidas3.svg" alt="Imagem 3"></div>
-            <div class="carousel-item"><img src="/img/comidas4.svg" alt="Imagem 4"></div>
-            <div class="carousel-item"><img src="/img/comidas5.svg" alt="Imagem 5"></div>
-            <div class="carousel-item"><img src="/img/comidas6.svg" alt="Imagem 6"></div>
-            <div class="carousel-item"><img src="/img/comidas7.svg" alt="Imagem 7"></div>
-            <div class="carousel-item"><img src="/img/comidas8.svg" alt="Imagem 8"></div>
-            <div class="carousel-item"><img src="/img/comidas9.svg" alt="Imagem 9"></div>
+<div class="carrossel-container-home">
+    <button class="carousel-button-home prev">◀</button>
+        <div class="carousel-home">
+            <div class="carousel-item-home"><img src="/img/comidas1.svg" alt="Imagem 1"></div>
+            <div class="carousel-item-home"><img src="/img/comidas2.svg" alt="Imagem 2"></div>
+            <div class="carousel-item-home"><img src="/img/comidas3.svg" alt="Imagem 3"></div>
+            <div class="carousel-item-home"><img src="/img/comidas4.svg" alt="Imagem 4"></div>
+            <div class="carousel-item-home"><img src="/img/comidas5.svg" alt="Imagem 5"></div>
+            <div class="carousel-item-home"><img src="/img/comidas6.svg" alt="Imagem 6"></div>
+            <div class="carousel-item-home"><img src="/img/comidas7.svg" alt="Imagem 7"></div>
+            <div class="carousel-item-home"><img src="/img/comidas8.svg" alt="Imagem 8"></div>
+            <div class="carousel-item-home"><img src="/img/comidas9.svg" alt="Imagem 9"></div>
         </div>
-    <button class="carousel-button next">▶</button>
+    <button class="carousel-button-home next">▶</button>
 </div>
 
 <div class="carrossel-container2">
@@ -177,16 +177,15 @@
     <div class="restaurant-card">
         <img class="card-image" src="{{this.imagem_url}}" alt="{{this.nome}}">
         <h3>{{this.nome}}</h3>
-        <p>Avaliação: {{this.avaliacao}}</p>
+        <p>Avaliação: {{this.avaliacao}}★</p>
         <p>Tipo: {{this.tipo}}</p>
         <p>Distância: {{this.distancia}} km</p>
         <p>Tempo médio de entrega: {{this.tempo_entrega}} min</p>
         <p>Valor médio: R$ {{this.valor_medio}}</p>
+        <a class="ver-mais-btn" href="/restaurante/{{this.id}}">Ver Mais</a>
     </div>
     {{/each}}
 </div>
-
-<button id="ver-mais" onclick="location.href='/mais-restaurantes'">Ver Mais</button>
 
 </div>
 
