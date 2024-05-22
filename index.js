@@ -7,7 +7,7 @@ const app = express();
 // Configurando o handlebars como template engine
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
-app.set('views', './views'); 
+app.set('views', './views');
 
 // Rota para a página de login
 app.get('/login', (req, res) => {
@@ -49,6 +49,7 @@ app.get('/restaurante/:id', (req, res) => {
     const restauranteId = req.params.id;
     const queryRestaurante = 'SELECT * FROM restaurantes WHERE id = ?';
     const queryLanches = 'SELECT * FROM lanches WHERE restaurante_id = ?';
+    const queryAcompanhamentos = 'SELECT * FROM acompanhamentos WHERE restaurante_id';
 
     connection.query(queryRestaurante, [restauranteId], (err, restauranteResult) => {
         if (err) {
@@ -64,10 +65,19 @@ app.get('/restaurante/:id', (req, res) => {
                 return;
             }
 
-            res.render('restaurante', {
-                restaurante: restauranteResult[0],
-                lanches: lanchesResult
-            });
+            connection.query(queryAcompanhamentos, [restauranteId], (err, acompanhamentosResult) => {
+                if (err) {
+                    console.err('Erro ao buscar dados dos acompanhamentos:', err)
+                    res.status(500).send('Erro ao buscar dados dos acomapnhamntos');
+                    return;
+                }
+
+                res.render('restaurante', {
+                    restaurante: restauranteResult[0],
+                    lanches: lanchesResult,
+                    acompanhamentos: acompanhamentosResult
+                });
+            })
         });
     });
 });

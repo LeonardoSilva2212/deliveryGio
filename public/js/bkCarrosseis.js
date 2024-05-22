@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const carousel = document.querySelector(".carousel");
-    const items = document.querySelectorAll(".carousel-item");
-    const prevButton = document.getElementById(".carousel-button.prev");
-    const nextButton = document.getElementById(".carousel-button.next");
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
 
     let currentIndex = 0;
+    const itemsToShow = 5;
 
     function updateCarousel() {
-        const offset = currentIndex * -20;
-        carousel.style.transform = `translateX(${offset}%)`;
+        const translateX = -currentIndex * (100 / itemsToShow);
+        carousel.style.transform = `translateX(${translateX}%)`;
     }
 
-    prevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
+    prevButton.addEventListener('click', () => {
+        if(currentIndex > 0){
             currentIndex--;
             updateCarousel();
         }
     });
 
-    nextButton.addEventListener("click", () => {
-        if (currentIndex < items.length - 5) { 
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < items.length - itemsToShow) {
             currentIndex++;
             updateCarousel();
         }

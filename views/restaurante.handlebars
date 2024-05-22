@@ -8,12 +8,14 @@
     <section>
 
         <div class="info">
-            <p>Avaliação: {{restaurante.avaliacao}}★</p>
-            <p>Tipo: {{restaurante.tipo}}</p>
+            <p>Avaliação: {{restaurante.avaliacao}}★</p> 
+            <p>Tipo: {{restaurante.tipo}}</p> 
             <p>Distância: {{restaurante.distancia}} km</p>
-            <p>Tempo de Entrega: {{restaurante.tempo_entrega}} minutos</p>
+            <p>Tempo de Entrega: {{restaurante.tempo_entrega}} minutos</p> 
             <p>Valor Médio: R$ {{restaurante.valor_medio}}</p>
         </div>
+
+         <h2>Lanches:</h2>
 
         <div class="carousel-container">
             <button class="carousel-button prev">◀</button>
@@ -21,6 +23,19 @@
                 {{#each lanches}}
                     <div class="carousel-item">
                         <img src="/{{this.imagem_url}}" alt="Lanche">
+                    </div>
+                {{/each}}
+            </div>
+
+            <button class="carousel-button next">▶</button>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-button prev">◀</button>
+            <div class="carousel">
+                {{#each acompanhamentos}}
+                    <div class="carousel-item">
+                        <img src="/{{this.imagem_url}}" alt="acompanhamentos">
                     </div>
                 {{/each}}
             </div>
