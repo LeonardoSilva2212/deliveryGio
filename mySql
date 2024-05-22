@@ -1,0 +1,50 @@
+/* Create database restaurantes;
+use restaurantes;
+
+CREATE TABLE IF NOT EXISTS restaurantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    imagem_url VARCHAR(255) NOT NULL,
+    avaliacao FLOAT NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
+    distancia FLOAT NOT NULL,
+    tempo_entrega INT NOT NULL,
+    valor_medio DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO restaurantes (nome, imagem_url, avaliacao, tipo, distancia, tempo_entrega, valor_medio) VALUES
+('McDonalds', 'img/mcDonaldsImg.svg', 4.5, 'Lanches', 2.5, 30, 25.00),
+('Burger King', 'img/burguerKingImg.svg', 4.0, 'Lanches', 3.0, 40, 30.00),
+('Subway', 'img/subwayImg.svg', 3.8, 'Lanches', 1.5, 25, 50.00),
+('OakBerry Açai', 'img/oakBerryImg.svg', 4.2, 'Açai', 2.0, 35, 40.00),
+('Trilha do pão - Barueri', 'img/trilhaPaoImg.svg', 4.7, 'Padaria', 1.0, 20, 20.00),
+('Dona Deôla', 'img/donaDeolaImg.svg', 3.5, 'Padaria', 4.0, 45, 35.00);
+
+select * from restaurantes;
+
+CREATE TABLE IF NOT EXISTS lanches (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    restaurante_id INT,
+    imagem_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
+);
+
+INSERT INTO lanches (restaurante_id, imagem_url) VALUES
+(2, 'img/lancheBK1.svg'), (2, 'img/lancheBK2.svg'), (2, 'img/lancheBK3.svg'), (2, 'img/lancheBK4.svg'), (2, 'img/lancheBK5.svg'),
+(2, 'img/lancheBK6.svg'), (2, 'img/lancheBK7.svg'), (2, 'img/lancheBK8.svg'), (2, 'img/lancheBK9.svg'), (2, 'img/lancheBK10.svg');
+
+select * from lanches;
+
+Create table if not exists acompanhamentos (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    restaurante_id INT,
+    imagem_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
+);
+
+INSERT INTO acompanhamentos (restaurante_id, imagem_url) VALUES
+(2, 'img/acompBK1.svg'), (2, 'img/acompBK2.svg'), (2, 'img/acompBK3.svg'), (2, 'img/acompBK4.svg'), (2, 'img/acompBK5.svg'),
+(2, 'img/acompBK6.svg'), (2, 'img/acompBK7.svg'), (2, 'img/acompBK8.svg'), (2, 'img/acompBK9.svg'), (2, 'img/acompBK10.svg');
+
+select * from acompanhamentos;
+ */
