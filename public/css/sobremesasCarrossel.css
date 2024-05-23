@@ -1,0 +1,51 @@
+.carousel-container-sobremesas{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.carousel-button-sobremesas {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: orange;
+}
+
+.carousel-button-sobremesas.prev {
+    left: 0;
+    margin-top: -11px;
+}
+
+.carousel-button-sobremesas.next {
+    right: 0;
+    margin-top: -11px;
+}
+
+.carousel-sobremesas{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 30px;
+}
+
+.carousel-item-sobremesas{
+    min-width: 20%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.carousel-sobremesas img{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin: auto;
+    margin-left: 25px;
+}

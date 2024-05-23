@@ -30,21 +30,40 @@
             <button class="carousel-button next">▶</button>
         </div>
 
-        <div class="carousel-container">
-            <button class="carousel-button prev">◀</button>
-            <div class="carousel">
+        <h2>Acompanhamentos:</h2>
+
+        <div class="carousel-container-acomp">
+            <button class="carousel-button-acomp prev">◀</button>
+            <div class="carousel-acomp">
                 {{#each acompanhamentos}}
-                    <div class="carousel-item">
+                    <div class="carousel-item-acomp">
                         <img src="/{{this.imagem_url}}" alt="acompanhamentos">
                     </div>
                 {{/each}}
             </div>
 
-            <button class="carousel-button next">▶</button>
+            <button class="carousel-button-acomp next">▶</button>
+        </div>
+
+        <h2>Sobremesas:</h2>
+
+        <div class="carousel-container-sobremesas">
+            <button class="carousel-button-sobremesas prev">◀</button>
+            <div class="carousel-sobremesas">
+                {{#each sobremesas}}
+                    <div class="carousel-item-sobremesas">
+                        <img src="/{{this.imagem_url}}" alt="sobremesas">
+                    </div>
+                {{/each}}
+            </div>
+
+            <button class="carousel-button-sobremesas next">▶</button>
         </div>
 
     </section>
     
 </main>
-<script src="/js/bkCarrosseis.js"></script>
+<script src="/js/lanchesCarousel.js"></script>
+<script src="/js/acompCarousel.js"></script>
+<script src="/js/sobremesasCarousel.js"></script>
 

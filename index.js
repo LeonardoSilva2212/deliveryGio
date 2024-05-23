@@ -49,7 +49,8 @@ app.get('/restaurante/:id', (req, res) => {
     const restauranteId = req.params.id;
     const queryRestaurante = 'SELECT * FROM restaurantes WHERE id = ?';
     const queryLanches = 'SELECT * FROM lanches WHERE restaurante_id = ?';
-    const queryAcompanhamentos = 'SELECT * FROM acompanhamentos WHERE restaurante_id';
+    const queryAcompanhamentos = 'SELECT * FROM acompanhamentos WHERE restaurante_id = ?';
+    const querySobremesas = 'SELECT * FROM sobremesas WHERE restaurante_id = ?';
 
     connection.query(queryRestaurante, [restauranteId], (err, restauranteResult) => {
         if (err) {
@@ -72,11 +73,20 @@ app.get('/restaurante/:id', (req, res) => {
                     return;
                 }
 
-                res.render('restaurante', {
-                    restaurante: restauranteResult[0],
-                    lanches: lanchesResult,
-                    acompanhamentos: acompanhamentosResult
+                connection.query(querySobremesas, [restauranteId], (err, sobremesasResult) => {
+                    if (err) {
+                        console.error('Erro ao buscar dados das sobremesas:', err);
+                        res.status(500).send('Erro ao buscar dados das sobremesas');
+                        return;
+                    }
+
+                    res.render('restaurante', {
+                        restaurante: restauranteResult[0],
+                        lanches: lanchesResult,
+                        acompanhamentos: acompanhamentosResult,
+                        sobremesas:sobremesasResult
                 });
+              })
             })
         });
     });
