@@ -22,6 +22,8 @@ INSERT INTO restaurantes (nome, imagem_url, avaliacao, tipo, distancia, tempo_en
 
 select * from restaurantes;
 
+-- ------------//----------- --
+
 CREATE TABLE IF NOT EXISTS lanches (
     id INT AUTO_INCREMENT PRIMARY KEY,
     restaurante_id INT,
@@ -30,10 +32,15 @@ CREATE TABLE IF NOT EXISTS lanches (
 );
 
 INSERT INTO lanches (restaurante_id, imagem_url) VALUES
+(1, 'img/lancheMC1.svg'), (1, 'img/lancheMC2.svg'), (1, 'img/lancheMC3.svg'), (1, 'img/lancheMC4.svg'), (1, 'img/lancheMC5.svg'),
+(1, 'img/lancheMC6.svg'), (1, 'img/lancheMC7.svg'), (1, 'img/lancheMC8.svg'), (1, 'img/lancheMC9.svg'), (1, 'img/lancheMC10.svg'),
+-- ----------------//------------------- --
 (2, 'img/lancheBK1.svg'), (2, 'img/lancheBK2.svg'), (2, 'img/lancheBK3.svg'), (2, 'img/lancheBK4.svg'), (2, 'img/lancheBK5.svg'),
 (2, 'img/lancheBK6.svg'), (2, 'img/lancheBK7.svg'), (2, 'img/lancheBK8.svg'), (2, 'img/lancheBK9.svg'), (2, 'img/lancheBK10.svg');
 
 select * from lanches;
+
+-- ------------//----------- --
 
 Create table if not exists acompanhamentos (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,8 +50,30 @@ Create table if not exists acompanhamentos (
 );
 
 INSERT INTO acompanhamentos (restaurante_id, imagem_url) VALUES
+(1, 'img/acompMC1.svg'), (1, 'img/acompMC2.svg'), (1, 'img/acompMC3.svg'), (1, 'img/acompMC4.svg'), (1, 'img/acompMC5.svg'),
+(1, 'img/acompMC6.svg'), (1, 'img/acompMC7.svg'), (1, 'img/acompMC8.svg'), (1, 'img/acompMC9.svg'), (1, 'img/acompMC10.svg'),
+-- ---------------//---------------- --
 (2, 'img/acompBK1.svg'), (2, 'img/acompBK2.svg'), (2, 'img/acompBK3.svg'), (2, 'img/acompBK4.svg'), (2, 'img/acompBK5.svg'),
 (2, 'img/acompBK6.svg'), (2, 'img/acompBK7.svg'), (2, 'img/acompBK8.svg'), (2, 'img/acompBK9.svg'), (2, 'img/acompBK10.svg');
 
 select * from acompanhamentos;
- */
+
+-- ------------//----------- --
+
+Create table if not exists sobremesas(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	restaurante_id INT,
+	imagem_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
+);
+
+INSERT INTO sobremesas (restaurante_id, imagem_url) VALUES
+(1, 'img/sobremesaMC1.svg'), (1, 'img/sobremesaMC2.svg'), (1, 'img/sobremesaMC3.svg'), (1, 'img/sobremesaMC4.svg'), (1, 'img/sobremesaMC5.svg'),
+(1, 'img/sobremesaMC6.svg'), (1, 'img/sobremesaMC7.svg'), (1, 'img/sobremesaMC8.svg'), (1, 'img/sobremesaMC.svg'), (1, 'img/sobremesaMC10.svg'),
+-- ---------------//--------------- --
+(2, 'img/sobremesaBK1.svg'), (2, 'img/sobremesaBK2.svg'), (2, 'img/sobremesaBK3.svg'), (2, 'img/sobremesaBK4.svg'), (2, 'img/sobremesaBK5.svg'),
+(2, 'img/sobremesaBK6.svg'), (2, 'img/sobremesaBK7.svg'), (2, 'img/sobremesaBK8.svg'), (2, 'img/sobremesaBK9.svg'), (2, 'img/sobremesaBK10.svg');
+ 
+ select * from sobremesas;
+ 
+ -- ------------//----------- -- */
