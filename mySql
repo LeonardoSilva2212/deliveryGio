@@ -16,7 +16,7 @@ INSERT INTO restaurantes (nome, imagem_url, avaliacao, tipo, distancia, tempo_en
 ('McDonalds', 'img/mcDonaldsImg.svg', 4.5, 'Lanches', 2.5, 30, 25.00),
 ('Burger King', 'img/burguerKingImg.svg', 4.0, 'Lanches', 3.0, 40, 30.00),
 ('Subway', 'img/subwayImg.svg', 3.8, 'Lanches', 1.5, 25, 50.00),
-('OakBerry Açai', 'img/oakBerryImg.svg', 4.2, 'Açai', 2.0, 35, 40.00),
+('Habbib´s', 'img/habibsLogo.svg', 4.2, 'Esfihha', 2.0, 35, 40.00),
 ('Trilha do pão - Barueri', 'img/trilhaPaoImg.svg', 4.7, 'Padaria', 1.0, 20, 20.00),
 ('Dona Deôla', 'img/donaDeolaImg.svg', 3.5, 'Padaria', 4.0, 45, 35.00);
 
@@ -36,7 +36,10 @@ INSERT INTO lanches (restaurante_id, imagem_url) VALUES
 (1, 'img/lancheMC6.svg'), (1, 'img/lancheMC7.svg'), (1, 'img/lancheMC8.svg'), (1, 'img/lancheMC9.svg'), (1, 'img/lancheMC10.svg'),
 -- ----------------//------------------- --
 (2, 'img/lancheBK1.svg'), (2, 'img/lancheBK2.svg'), (2, 'img/lancheBK3.svg'), (2, 'img/lancheBK4.svg'), (2, 'img/lancheBK5.svg'),
-(2, 'img/lancheBK6.svg'), (2, 'img/lancheBK7.svg'), (2, 'img/lancheBK8.svg'), (2, 'img/lancheBK9.svg'), (2, 'img/lancheBK10.svg');
+(2, 'img/lancheBK6.svg'), (2, 'img/lancheBK7.svg'), (2, 'img/lancheBK8.svg'), (2, 'img/lancheBK9.svg'), (2, 'img/lancheBK10.svg'),
+-- ----------------//------------------- --
+(3, 'img/lancheSW1.svg'), (3, 'img/lancheSW2.svg'), (3, 'img/lancheSW3.svg'), (3, 'img/lancheSW4.svg'), (3, 'img/lancheSW5.svg'),
+(3, 'img/lancheSW6.svg'), (3, 'img/lancheSW7.svg'), (3, 'img/lancheSW8.svg'), (3, 'img/lancheSW9.svg'), (3, 'img/lancheSW10.svg');
 
 select * from lanches;
 
@@ -54,7 +57,10 @@ INSERT INTO acompanhamentos (restaurante_id, imagem_url) VALUES
 (1, 'img/acompMC6.svg'), (1, 'img/acompMC7.svg'), (1, 'img/acompMC8.svg'), (1, 'img/acompMC9.svg'), (1, 'img/acompMC10.svg'),
 -- ---------------//---------------- --
 (2, 'img/acompBK1.svg'), (2, 'img/acompBK2.svg'), (2, 'img/acompBK3.svg'), (2, 'img/acompBK4.svg'), (2, 'img/acompBK5.svg'),
-(2, 'img/acompBK6.svg'), (2, 'img/acompBK7.svg'), (2, 'img/acompBK8.svg'), (2, 'img/acompBK9.svg'), (2, 'img/acompBK10.svg');
+(2, 'img/acompBK6.svg'), (2, 'img/acompBK7.svg'), (2, 'img/acompBK8.svg'), (2, 'img/acompBK9.svg'), (2, 'img/acompBK10.svg'),
+-- --------------//-----------------
+(3, 'img/acompSW1.svg'), (3, 'img/acompSW2.svg'), (3, 'img/acompSW3.svg'), (3, 'img/acompSW4.svg'), (3, 'img/acompSW5.svg'),
+(3, 'img/acompSW6.svg'), (3, 'img/acompSW7.svg'), (3, 'img/acompSW8.svg'), (3, 'img/acompSW9.svg'), (3, 'img/acompSW10.svg');
 
 select * from acompanhamentos;
 
@@ -72,7 +78,10 @@ INSERT INTO sobremesas (restaurante_id, imagem_url) VALUES
 (1, 'img/sobremesaMC6.svg'), (1, 'img/sobremesaMC7.svg'), (1, 'img/sobremesaMC8.svg'), (1, 'img/sobremesaMC.svg'), (1, 'img/sobremesaMC10.svg'),
 -- ---------------//--------------- --
 (2, 'img/sobremesaBK1.svg'), (2, 'img/sobremesaBK2.svg'), (2, 'img/sobremesaBK3.svg'), (2, 'img/sobremesaBK4.svg'), (2, 'img/sobremesaBK5.svg'),
-(2, 'img/sobremesaBK6.svg'), (2, 'img/sobremesaBK7.svg'), (2, 'img/sobremesaBK8.svg'), (2, 'img/sobremesaBK9.svg'), (2, 'img/sobremesaBK10.svg');
+(2, 'img/sobremesaBK6.svg'), (2, 'img/sobremesaBK7.svg'), (2, 'img/sobremesaBK8.svg'), (2, 'img/sobremesaBK9.svg'), (2, 'img/sobremesaBK10.svg'),
+ -- ---------------//--------------- --
+(3, 'img/sobremesaSW1.svg'), (3, 'img/sobremesaSW2.svg'), (3, 'img/sobremesaSW3.svg'), (3, 'img/sobremesaSW4.svg'), (3, 'img/sobremesaSW5.svg'),
+(3, 'img/sobremesaSW6.svg'), (3, 'img/sobremesaSW7.svg'), (3, 'img/sobremesaSW8.svg'), (3, 'img/sobremesaSW9.svg'), (3, 'img/sobremesaSW10.svg');
  
  select * from sobremesas;
  
