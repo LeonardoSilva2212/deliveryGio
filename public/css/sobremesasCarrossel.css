@@ -30,7 +30,7 @@
 
 .carousel-sobremesas{
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
     width: 100%;
     max-width: 1400px;
     margin-top: 30px;
