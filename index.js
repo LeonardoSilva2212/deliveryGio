@@ -1,21 +1,20 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mysql = require("mysql2");
-
 const app = express();
+const path = require('path');
+const methodOverride = require('method-override');
+
+app.use(methodOverride('_method'));
 
 // Configurando o handlebars como template engine
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-// Rota para a página de login
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
 // Os arquivos públicos ficarão na pasta public
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 // Conexão com o banco de dados MySQL
 const connection = mysql.createConnection({
@@ -32,6 +31,22 @@ connection.connect((err) => {
     }
     console.log('Conectado ao banco de dados MySQL');
 });
+
+// Tornando a conexão disponível para as rotas
+app.set('db', connection);
+
+// Importando e utilizando a rota de parceiros
+const parceirosRouter = require('./routes/parceiros');
+app.use(parceirosRouter);
+
+// Rota para a página de login
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+app.get('/cadastroParceiros', (req, res) => {
+    res.render('cadastroParceiros');
+})
 
 app.get('/', (req, res) => {
     const query = 'SELECT * FROM restaurantes';
@@ -68,8 +83,8 @@ app.get('/restaurante/:id', (req, res) => {
 
             connection.query(queryAcompanhamentos, [restauranteId], (err, acompanhamentosResult) => {
                 if (err) {
-                    console.err('Erro ao buscar dados dos acompanhamentos:', err)
-                    res.status(500).send('Erro ao buscar dados dos acomapnhamntos');
+                    console.error('Erro ao buscar dados dos acompanhamentos:', err);
+                    res.status(500).send('Erro ao buscar dados dos acompanhamentos');
                     return;
                 }
 
@@ -84,14 +99,13 @@ app.get('/restaurante/:id', (req, res) => {
                         restaurante: restauranteResult[0],
                         lanches: lanchesResult,
                         acompanhamentos: acompanhamentosResult,
-                        sobremesas:sobremesasResult
+                        sobremesas: sobremesasResult
+                    });
                 });
-              })
-            })
+            });
         });
     });
 });
-
 
 const PORT = 3000;
 app.listen(PORT, () => {

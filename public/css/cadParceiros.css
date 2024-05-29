@@ -1,0 +1,71 @@
+/* Estilo do card do formulário */
+.main-cadParceiros {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+
+.logoCad-parceiros{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group-mb-3 {
+    margin-bottom: 1rem;
+}
+
+.form-group-mb-3 label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group-mb-3 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-group-mb-3 input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.form-group-capParceiros {
+    margin-top: 1rem;
+}
+
+.form-group-capParceiros button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-btn-primary {
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-btn-danger:hover {
+    background-color: #c82333;
+}

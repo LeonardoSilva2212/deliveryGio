@@ -1,0 +1,44 @@
+.logo{
+    display: flex;
+}
+
+.logo h1{
+    font-size: 20px;
+}
+
+.logo button{
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 23px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.tabela-parceiros {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela-parceiros table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.tabela-parceiros th, .tabela-parceiros td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabela-parceiros th {
+    background-color: #f2f2f2;
+}
+
+.tabela-parceiros tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+

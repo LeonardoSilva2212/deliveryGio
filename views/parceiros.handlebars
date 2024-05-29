@@ -1,0 +1,40 @@
+<main class="parceiros">
+    <section class="header">
+        <div class="logo">
+            <img src="/img/logoImg.svg" alt="Logo">
+            <hr>
+            <h1>Seja muito bem vindo a nossa área de Parceiros</h1>
+            <hr>
+            <a href="/cadastroParceiros"><button>Adicionar parceiro</button></a>
+            <h1>ou</h1>
+            <a href="/"><button>Sair</button></a>
+        </div>
+    </section>
+    <section class="tabela-parceiros container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Número de telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th> <!-- Adicionando uma coluna para as ações -->
+                </tr>
+            </thead>
+            <tbody>
+                {{#each parceiros}}
+                <tr>
+                    <td>{{this.nome}}</td>
+                    <td>{{this.numero}}</td>
+                    <td>{{this.email}}</td>
+                    <td>
+              
+                        <form action="/parceiros/{{this.id}}?_method=DELETE" method="post">
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+</main>
