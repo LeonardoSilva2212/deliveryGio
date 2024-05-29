@@ -101,5 +101,21 @@ INSERT INTO sobremesas (restaurante_id, imagem_url) VALUES
 (5, 'img/sobremesaRZ6.svg'), (5, 'img/sobremesaRZ7.svg'), (5, 'img/sobremesaRZ8.svg'), (5, 'img/sobremesaRZ9.svg'), (5, 'img/sobremesaRZ10.svg');
  select * from sobremesas; 
  
- -- ------------//----------- --	
+ -- ------------//----------- --
+ 
+ create table if not exists parceiros(
+	 id INT AUTO_INCREMENT PRIMARY KEY,
+	 nome VARCHAR(255) NOT NULL,
+     numero VARCHAR (255) NOT NULL,
+	 email VARCHAR(255) NOT NULL
+ );
+ 
+insert into parceiros (nome, numero, email) values
+ 
+('McDonalds', '4516-4312', 'mcdonalds@gmail.com'),
+('Burger King', '4898-6598', 'burgerking@gmail.com'),
+('SubWay', '4176-9986', 'subway@gmail.com'),
+('Habib´s', '4002-8922', 'habibs@gmail.com'),
+('Ragazzo', '4067-7765', 'ragazzo@gmail.com');
+select * from parceiros; 
  -- ------------//----------- -- */

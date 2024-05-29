@@ -14,10 +14,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th style="border-radius: 10px 0 0 0;">Nome</th>
                     <th>Número de telefone</th>
                     <th>Email</th>
-                    <th>Ações</th> <!-- Adicionando uma coluna para as ações -->
+                    <th style="border-radius:0 10px 0 0;">Ações</th> <!-- Adicionando uma coluna para as ações -->
                 </tr>
             </thead>
             <tbody>
@@ -27,10 +27,13 @@
                     <td>{{this.numero}}</td>
                     <td>{{this.email}}</td>
                     <td>
-              
-                        <form action="/parceiros/{{this.id}}?_method=DELETE" method="post">
-                            <button type="submit">Excluir</button>
-                        </form>
+              <div class="buttons">
+                <form action="/parceiros/{{this.id}}?_method=DELETE" method="post">
+                <button class="excluir" type="submit">Excluir</button>
+                </form>
+                <button class="atualizar" type="submit">Atualizar</button>
+              </div>
+                       
                     </td>
                 </tr>
                 {{/each}}

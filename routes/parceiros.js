@@ -48,12 +48,10 @@ router.delete("/parceiros/:id", (req, res) => {
             console.log("erro", err);
             res.status(500).send('Erro ao excluir parceiro');
             return;
-        }
+        }     
 
         res.redirect("/parceiros");
-    });
+    }); 
 });
-
-
 
 module.exports = router;
