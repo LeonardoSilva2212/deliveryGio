@@ -27,13 +27,12 @@
                     <td>{{this.numero}}</td>
                     <td>{{this.email}}</td>
                     <td>
-              <div class="buttons">
-                <form action="/parceiros/{{this.id}}?_method=DELETE" method="post">
-                <button class="excluir" type="submit">Excluir</button>
-                </form>
-                <button class="atualizar" type="submit">Atualizar</button>
-              </div>
-                       
+                        <div class="buttons">
+                            <form action="/parceiros/{{this.id}}?_method=DELETE" method="post">
+                                <button class="excluir" type="submit">Excluir</button>
+                            </form>
+                            <a href="/parceiros/{{this.id}}/editar"><button class="atualizar" type="button">Atualizar</button></a>
+                        </div>
                     </td>
                 </tr>
                 {{/each}}

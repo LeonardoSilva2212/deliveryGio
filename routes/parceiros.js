@@ -54,4 +54,39 @@ router.delete("/parceiros/:id", (req, res) => {
     }); 
 });
 
+// Adicionar esta rota para renderizar o formulário de atualização
+router.get('/parceiros/:id/editar', (req, res) => {
+    const id = req.params.id;
+    const query = 'SELECT * FROM parceiros WHERE id = ?';
+    const connection = req.app.get('db');
+
+    connection.query(query, [id], (err, results) => {
+        if (err) {
+            console.error('Erro ao buscar dados do parceiro:', err);
+            res.status(500).send('Erro ao buscar dados do parceiro');
+            return;
+        }
+        res.render('editarParceiro', { parceiro: results[0] });
+    });
+});
+
+// Adicionar esta rota para lidar com a atualização dos dados
+router.put('/parceiros/:id', (req, res) => {
+    const id = req.params.id;
+    const { nome, numero, email } = req.body;
+    const query = 'UPDATE parceiros SET nome = ?, numero = ?, email = ? WHERE id = ?';
+    const connection = req.app.get('db');
+
+    connection.query(query, [nome, numero, email, id], (err) => {
+        if (err) {
+            console.error('Erro ao atualizar parceiro:', err);
+            res.status(500).send('Erro ao atualizar parceiro');
+            return;
+        }
+        res.redirect('/parceiros');
+    });
+});
+
+
+
 module.exports = router;

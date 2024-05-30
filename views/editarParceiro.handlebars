@@ -1,0 +1,42 @@
+<main class="main-cadParceiros">
+    <div class="logoCad-parceiros">
+        <img src="/img/logoImg.svg" alt="Logo">
+    </div>
+    <h6>Edite as informações: </h6>
+    <form action="/parceiros/{{parceiro.id}}?_method=PUT" method="post">
+        <div class="form-group-mb-3">
+            <label for="nome">Nome</label>
+            <input required
+                type="text"
+                id="nome"
+                name="nome"
+                class="form-control"
+                value="{{parceiro.nome}}" 
+            />
+        </div>
+        <div class="form-group-mb-3">
+            <label for="numero">Número</label>
+            <input required
+                type="text"
+                id="numero"
+                name="numero"
+                class="form-control"
+                value="{{parceiro.numero}}" 
+            />
+        </div>
+        <div class="form-group-mb-3">
+            <label for="email">Email</label>
+            <input required
+                type="text"
+                id="email"
+                name="email"
+                class="form-control"
+                value="{{parceiro.email}}" 
+            />
+        </div>
+        <div class="form-group-capParceiros">
+            <button type="submit" class="btn-btn-primary">Atualizar</button>
+            <button type="reset" class="btn-btn-danger">Limpar</button>
+        </div>
+    </form>
+</main>

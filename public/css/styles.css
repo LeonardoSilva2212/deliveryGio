@@ -116,18 +116,22 @@ hr {
     margin-left: 2px;
 }
 
+.options p:last-child{
+    margin-left: 2px;
+}
+
 .options button {
-    margin-top: 1.5625vw;
-    color: black;
+    margin-top: 21px;
+    color: white;
     background-color: orange;
     border: transparent;
     border-radius: 1.5625vw;
     font-size: 1.015625vw;
-    margin-left: 0.78125vw;
+    margin-left: 3px;
     height: 2.734375vw;
     cursor: pointer;
     width: 80px;
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 .options img {
