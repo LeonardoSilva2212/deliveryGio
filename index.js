@@ -32,6 +32,36 @@ connection.connect((err) => {
     console.log('Conectado ao banco de dados MySQL');
 });
 
+app.post('/create-account', (req, res) => {
+    const { nome, email, numero, senha } = req.body;
+
+    const queryCheckEmail = 'SELECT * FROM usuarios WHERE email = ?';
+    connection.query(queryCheckEmail, [email], (err, results) => {
+        if (err) {
+            console.error('Erro ao verificar email existente:', err);
+            res.status(500).send('Erro ao verificar email existente');
+            return;
+        }
+
+        if (results.length > 0) {
+            res.json({ success: false, message: 'Este email já está em uso. Por favor, escolha outro.' });
+            return;
+        }
+
+        const queryCreateAccount = 'INSERT INTO usuarios (name, email, phone, password) VALUES (?, ?, ?, ?)';
+        connection.query(queryCreateAccount, [nome, email, numero, senha], (err, result) => {
+            if (err) {
+                console.error('Erro ao criar conta:', err);
+                res.status(500).send('Erro ao criar conta');
+                return;
+            }
+
+            res.json({ success: true, message: 'Conta criada com sucesso!' });
+        });
+    });
+});
+
+
 // Tornando a conexão disponível para as rotas
 app.set('db', connection);
 
@@ -46,6 +76,10 @@ app.get('/login', (req, res) => {
 
 app.get('/cadastroParceiros', (req, res) => {
     res.render('cadastroParceiros');
+})
+
+app.get('/entrar', (req, res) => {
+    res.render('entrar');
 })
 
 app.get('/', (req, res) => {

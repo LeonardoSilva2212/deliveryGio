@@ -83,7 +83,7 @@ body{
     outline: none;
 }
 
-hr {
+hr{
     color: orange;
     width: 0.15625vw;
     background-color: rgb(221, 150, 9);
@@ -173,4 +173,44 @@ hr {
     height: 2px;
     margin-top: 50px;
     margin-left: 410px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.footerHR img {
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h1 {
+    margin: 20px 0;
+}
+
+.imgRedirects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgRedirects a {
+    margin: 10px 0;
+}
+
+.imgRedirects img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-info p {
+    margin: 5px 0;
 }
