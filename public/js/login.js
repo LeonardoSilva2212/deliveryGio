@@ -14,19 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const accountData = {
-            name,
-            email,
-            phone,
-            password
-        };
+        const formData = new URLSearchParams();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('password', password);
 
         fetch('/create-account', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: JSON.stringify(accountData)
+            body: formData
         })
         .then(response => response.json())
         .then(data => {
@@ -43,3 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+

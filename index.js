@@ -1,9 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mysql = require("mysql2");
-const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const app = express();
 
 app.use(methodOverride('_method'));
 
@@ -15,6 +15,7 @@ app.set('views', './views');
 // Os arquivos públicos ficarão na pasta public
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Conexão com o banco de dados MySQL
 const connection = mysql.createConnection({
@@ -32,65 +33,32 @@ connection.connect((err) => {
     console.log('Conectado ao banco de dados MySQL');
 });
 
-app.post('/create-account', (req, res) => {
-    const { name, email, phone, password } = req.body;
-
-    const queryCheckEmail = 'SELECT * FROM usuarios WHERE email = ?';
-    connection.query(queryCheckEmail, [email], (err, results) => {
-        if (err) {
-            console.error('Erro ao verificar email existente:', err);
-            res.status(500).send('Erro ao verificar email existente');
-            return;
-        }
-
-        if (results.length > 0) {
-            res.json({ success: false, message: 'Este email já está em uso. Por favor, escolha outro.' });
-            return;
-        }
-
-        const queryCreateAccount = 'INSERT INTO usuarios (name, email, phone, password) VALUES (?, ?, ?, ?)';
-        connection.query(queryCreateAccount, [name, email, phone, password], (err, result) => {
-            if (err) {
-                console.error('Erro ao criar conta:', err);
-                res.status(500).send('Erro ao criar conta');
-                return;
-            }
-
-            res.json({ success: true, message: 'Conta criada com sucesso!' });
-        });
-    });
-});
-
-
 // Tornando a conexão disponível para as rotas
 app.set('db', connection);
 
-// Importando e utilizando a rota de parceiros
-const parceirosRouter = require('./routes/parceiros');
-app.use(parceirosRouter);
+let userLoggedIn = false;
 
-// Rota para a página de login
-app.get('/login', (req, res) => {
-    res.render('login');
-});
+// Importando e utilizando rotas
+const userRoutes = require('./routes/users');
+const parceirosRouter = require('./routes/parceiros');
+app.use(userRoutes);
+app.use(parceirosRouter);
 
 app.get('/cadastroParceiros', (req, res) => {
     res.render('cadastroParceiros');
-})
-
-app.get('/entrar', (req, res) => {
-    res.render('entrar');
-})
+});
 
 app.get('/', (req, res) => {
     const query = 'SELECT * FROM restaurantes';
+
+    console.log("minha variavel", userLoggedIn)
     connection.query(query, (err, results) => {
         if (err) {
             console.error('Erro ao buscar dados dos restaurantes:', err);
             res.status(500).send('Erro ao buscar dados dos restaurantes');
             return;
         }
-        res.render('home', { restaurantes: results });
+        res.render('home', { restaurantes: results, userLoggedIn: userLoggedIn });
     });
 });
 

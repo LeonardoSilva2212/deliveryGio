@@ -118,4 +118,13 @@ insert into parceiros (nome, numero, email) values
 ('Habib´s', '4002-8922', 'habibs@gmail.com'),
 ('Ragazzo', '4067-7765', 'ragazzo@gmail.com');
 select * from parceiros; 
- -- ------------//----------- -- */
+ -- ------------//----------- -- 
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+select * from usuarios; */

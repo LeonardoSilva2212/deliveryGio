@@ -19,13 +19,9 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #ffffff;
-    color: white;
+    background-color: white;
+    color: orange;
     text-decoration: none;
-}
-
-.btn-entrar:hover {
-    background-color: #ff9d00;
 }
 
 /* Estilos para o formulário de login */
@@ -33,13 +29,15 @@
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 300px;
+    width: 350px;
+    height: 380px;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: white;
 }
 
 .create-account-section-entrar h1 {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 20px;
 }
 
@@ -72,8 +70,8 @@ label {
     padding: 5px;
     width: 100%;
     background-color: transparent; /* Fundo transparente para destacar a cor de fundo laranja */
-    color: white; /* Cor do texto branca */
-    border-bottom: 1px solid white; /* Linha branca embaixo do input */
+    color: black; /* Cor do texto branca */
+    border-bottom: 1px solid rgb(0, 0, 0); /* Linha branca embaixo do input */
 }
 
 /* Estilos para o botão de submit */
@@ -81,7 +79,7 @@ label {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    background-color: orange;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -90,3 +88,15 @@ label {
 .btn-login-submit-entrar:hover {
     background-color: #555;
 }
+
+/* Estilos para o alerta de erro */
+.alert {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+

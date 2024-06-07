@@ -1,0 +1,94 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-section {
+    background-color: #ff9900;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+}
+
+.btn-entrar {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+    transition: none; /* Remover qualquer efeito de transição */
+    box-shadow: none; /* Remover qualquer efeito de sombra */
+    background: none; /* Remover fundo */
+    outline: none; /* Remover o contorno do foco */
+    border-radius: 0; /* Remover bordas arredondadas */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+
+.create-account-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.create-account-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF9900;
+}
+
+.create-account-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: #D9D9D9;
+}
+
+.input-container img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.btn-criar {
+    width: 50%;
+    padding: 10px;
+    margin-left: 100px;
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 20px;
+}
