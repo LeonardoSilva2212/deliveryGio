@@ -8,43 +8,31 @@
     <div class="create-account-section">
 
         <h1>Criar uma conta</h1>
-        <form action="/create-account" method="POST" class="create-account-form">
+
+        <form id="createAccountForm" class="create-account-form" action="/create-account" method="POST">
             <div class="form-group">
-                <label for="name">Nome:</label>
-
                 <div class="input-container">
-                    <input type="text" id="name" name="name" required>
-                    <img src="/img/nomeImg.svg" alt="Nome">
-                </div>
-
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <div class="input-container">
-                    <input type="email" id="email" name="email" required>
-                    <img src="/img/emailImg.svg" alt="Email">
+                    <input type="text" name="name" id="name" placeholder="Nome" required>
                 </div>
             </div>
-
             <div class="form-group">
-                <label for="phone">Telefone:</label>
                 <div class="input-container">
-                    <input type="tel" id="phone" name="phone" required>
-                    <img src="/img/telefoneImg.svg" alt="Telefone">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
                 </div>
             </div>
-
             <div class="form-group">
-                <label for="password">Senha:</label>
                 <div class="input-container">
-                    <input type="password" id="password" name="password" required>
-                    <img src="/img/senhaImg.svg" alt="Senha">
+                    <input type="tel" name="phone" id="phone" placeholder="Telefone" required>
                 </div>
             </div>
-
-            <button type="submit" class="btn-criar">Criar</button>
+            <div class="form-group">
+                <div class="input-container">
+                    <input type="password" name="password" id="password" placeholder="Senha" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-criar">Criar Conta</button>
         </form>
+
     </div>
 </main>
 

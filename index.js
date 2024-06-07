@@ -33,7 +33,7 @@ connection.connect((err) => {
 });
 
 app.post('/create-account', (req, res) => {
-    const { nome, email, numero, senha } = req.body;
+    const { name, email, phone, password } = req.body;
 
     const queryCheckEmail = 'SELECT * FROM usuarios WHERE email = ?';
     connection.query(queryCheckEmail, [email], (err, results) => {
@@ -49,7 +49,7 @@ app.post('/create-account', (req, res) => {
         }
 
         const queryCreateAccount = 'INSERT INTO usuarios (name, email, phone, password) VALUES (?, ?, ?, ?)';
-        connection.query(queryCreateAccount, [nome, email, numero, senha], (err, result) => {
+        connection.query(queryCreateAccount, [name, email, phone, password], (err, result) => {
             if (err) {
                 console.error('Erro ao criar conta:', err);
                 res.status(500).send('Erro ao criar conta');
