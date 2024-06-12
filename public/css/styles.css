@@ -127,7 +127,7 @@ hr{
     border: transparent;
     border-radius: 1.5625vw;
     font-size: 1.015625vw;
-    margin-left: 3px;
+    margin-left: 10px;
     height: 2.734375vw;
     cursor: pointer;
     width: 80px;
@@ -180,6 +180,11 @@ footer {
     padding: 20px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+
+}
+
+footer img{
+    display: flex;
 }
 
 .footerHR img {
